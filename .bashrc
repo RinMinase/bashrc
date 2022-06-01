@@ -69,6 +69,12 @@ gpbr() {
 alias gbp=gpb
 alias gbpr=gpbr
 
+# docker aliases
+alias dcu='docker-compose up -d'
+alias dce='docker-compose exec -it'
+alias dcr='docker-compose run --rm'
+alias dc='docker-compose'
+
 # other aliases
 alias gitex=gitex.cmd
 alias gx=gitex
