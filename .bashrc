@@ -1,30 +1,21 @@
 #!/usr/bin/env bash
 
 # git pull branch by merging
+# can be used by:
+#   gpb                   -> merges origin/master to current branch
+#   gpb develop           -> merges origin/develop to current branch
+#   gpb develop upstream  -> merges upstream/develop to current branch
 gpb() {
-  # defaults to master
-
-  # gpb
-  # gpb develop
-  # gpb develop upstream
-
+  # process:
   # git checkout master
   # git pull origin master
   # git checkout currBranch
   # git merge master
 
-  # if [ -z ${1+x} ] && [ -z ${2+x} ] then
-  #   echo "var is unset";
-  # else
-  #    echo "var is set to '$1'"
-  # fi
-
   if [ -d .git ]; then
     currBranch=$(git rev-parse --abbrev-ref HEAD);
     remote=${2:-"origin"}
     branch=${1:-"master"}
-
-    # echo "test $remote $branch";
 
     if [ "$branch" != "$currBranch" ]; then
       git checkout "$branch";
@@ -47,13 +38,12 @@ gpb() {
 }
 
 # git pull branch by rebase
+# similar to above but uses rebase instead of merge
 gpbr() {
   if [ -d .git ]; then
     currBranch=$(git rev-parse --abbrev-ref HEAD);
     remote=${2:-"origin"}
     branch=${1:-"master"}
-
-    # echo "test $remote $branch";
 
     if [ "$branch" != "$currBranch" ]; then
       git checkout "$branch";
@@ -75,9 +65,12 @@ gpbr() {
   fi;
 }
 
+# aliases for interchangeable characters of 2 functions above
 alias gbp=gpb
 alias gbpr=gpbr
 
+# other aliases
 alias gitex=gitex.cmd
 alias gx=gitex
 alias rebash='source ~/.bash_profile'
+alias refresh='source ~/.bash_profile'
