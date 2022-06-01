@@ -71,7 +71,7 @@ alias gbpr=gpbr
 
 # docker aliases
 alias dcu='docker-compose up -d'
-alias dce='docker-compose exec -it'
+alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm'
 alias dc='docker-compose'
 
