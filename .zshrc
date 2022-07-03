@@ -65,7 +65,11 @@ zstyle ':vcs_info:git:*' formats '(%b) '
 setopt PROMPT_SUBST
 
 # <green>user<blue>@machine <orange>path <red>branch %
-PROMPT='%F{78}%n%F{111}@%m %F{11}${PWD/#$HOME/~} %F{9}${vcs_info_msg_0_}%{%f%}%% '
+# PROMPT='%F{78}%n%F{111}@%m %F{11}${PWD/#$HOME/~} %F{9}${vcs_info_msg_0_}%{%f%}%% '
+
+# <green>user<blue>@machine <orange>~/.../three/sub-paths/only <red>branch %
+PROMPT='%F{78}%n%F{111}@%m %F{11}%(5~|%-1~/…/%3~|%4~) %F{9}${vcs_info_msg_0_}%{%f%}%% '
+
 
 # ==========================================
 
