@@ -68,7 +68,7 @@ setopt PROMPT_SUBST
 # PROMPT='%F{78}%n%F{111}@%m %F{11}${PWD/#$HOME/~} %F{9}${vcs_info_msg_0_}%{%f%}%% '
 
 # <green>user<blue>@machine <orange>~/.../three/sub-paths/only <red>branch %
-PROMPT='%F{78}%n%F{111}@%m %F{11}%(5~|%-1~/…/%3~|%4~) %F{9}${vcs_info_msg_0_}%{%f%}%% '
+PROMPT='%F{78}%n%F{111}@%m %F{172}%(5~|%-1~/…/%3~|%4~) %F{124}${vcs_info_msg_0_}%{%f%}%% '
 
 
 # ==========================================
