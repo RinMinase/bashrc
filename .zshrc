@@ -98,6 +98,8 @@ zle -N dotcomplete
 # Aliases
 # ------------------------------------------
 
+alias refresh='source ~/.zshrc'
+alias rebash='source ~/.zshrc'
 alias la='ls -la'
 alias dc='docker-compose'
 alias dcu='docker-compose up -d'
@@ -105,8 +107,7 @@ alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm'
 alias dcb='docker-compose build'
 alias yt='yt-dlp'
-alias refresh='source ~/.zshrc'
-alias rebash='source ~/.zshrc'
 alias termcolors='for code in {000..255}; do print -P -- "$code: %F{$code}Color%f"; done'
+alias nvm-lts='nvm install "lts/*" --reinstall-packages-from=current; nvm cache clear'
 
 # ==========================================
