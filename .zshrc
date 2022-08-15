@@ -39,6 +39,20 @@ unset __conda_setup
 
 
 # ==========================================
+# Bun Setup
+# ------------------------------------------
+
+# bun completions
+[ -s "/Users/rin/.bun/_bun" ] && source "/Users/rin/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# ==========================================
+
+
+# ==========================================
 # Fixes pasting urls in terminal
 # ------------------------------------------
 autoload -Uz bracketed-paste-magic
