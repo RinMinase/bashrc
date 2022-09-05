@@ -123,5 +123,6 @@ alias dcb='docker-compose build'
 alias yt='yt-dlp'
 alias termcolors='for code in {000..255}; do print -P -- "$code: %F{$code}Color%f"; done'
 alias nvm-lts='nvm install "lts/*" --reinstall-packages-from=current; nvm cache clear'
+alias gx='stree'
 
 # ==========================================
